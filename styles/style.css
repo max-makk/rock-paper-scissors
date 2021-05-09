@@ -1,0 +1,105 @@
+:root {
+    box-sizing: border-box;
+
+    --white1: #f7f7f7;
+    --white2: #eeeeee;
+    --dark1: #393e46;
+    --dark2: #929aab;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--white1);
+    color: var(--dark1);
+    text-align: center;
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+}
+
+header {
+    font-size: 3rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    background: var(--white2);
+    border-radius: 2em;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+main section p {
+    height: 2em;
+    font-size: 2rem;
+}
+
+button {
+    margin: 0.5em;
+    height: 10em;
+    width: 10em;
+    cursor: pointer;
+    border: 2px solid var(--dark1);
+    border-radius: 2em;
+}
+
+.rock {
+    background: url(/images/cave-painting.svg);
+}
+
+.paper {
+    background: url(/images/paper-roll-outline-variant.svg);
+}
+
+.scissors {
+    background: url(/images/scissors.svg);
+}
+
+button.rock, button.paper, button.scissors {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+button:active,
+.active {
+    transform: scale(0.95);
+}
+
+.selected{
+    background-color: var(--dark2);
+}
+
+footer p {
+    display: block;
+    margin-bottom: 0.4em;
+}
+
+footer {
+    font-size: 4rem;
+    padding: 0.2em;
+}
